@@ -1,0 +1,28 @@
+{
+  "author": "Dragos Crisan",
+  "dependencies": [{"name":"puppetlabs-powershell","version_requirement":">=1.0.6"}] ,
+  "license": "Open",
+  "name": "dragrom-nettime",
+  "operatingsystem_support": [
+  	  {
+  	       "operatingsystem": "Wiondows",
+  	       "operatingsystemrelease": [
+                 "Server 2003",
+                 "Server 2003 R2",
+                 "Server 2008",
+                 "Server 2008 R2",
+                 "Server 2012",
+                 "Server 2012 R2",
+                 "7",
+                 "8",
+                 "10"
+      ]
+  	  }
+  	],
+  "project_page": "",
+  "requirements": [],
+  "source": "https://github.com/dragrom/NetTime",
+  "summary": "This will install NetTime module",
+  "tags": [],
+  "version": "0.1.2"
+}

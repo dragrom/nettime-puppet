@@ -1,0 +1,34 @@
+$ErrorActionPreference = 'Stop'
+
+# For some reason try/catch wrapping only ensures
+# that none of this script runs at all
+# https://tickets.puppetlabs.com/browse/MODULES-2634
+#try {
+
+# variables
+$url = '<%= @download_url %>'
+#$unzipMethod = '<%= @unzip_type %>'
+if ($env:TEMP -eq $null) {
+  $env:TEMP = Join-Path $env:SystemDrive 'temp'
+}
+$nettimeTempDir = Join-Path $env:TEMP "NetTime"
+$tempDir = Join-Path $nettimeTempDir "NetTime"
+if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
+$file = Join-Path "C:/windows/Temp" "NetTimeSetup-314.exe"
+
+function Download-File {
+param (
+  [string]$url,
+  [string]$file
+ )
+  Write-Output "Downloading $url to $file"
+  $downloader = new-object System.Net.WebClient
+  $downloader.Proxy.Credentials=[System.Net.CredentialCache]::DefaultNetworkCredentials;
+  $downloader.DownloadFile($url, $file)
+}
+
+# download the package
+Download-File $url $file
+
+#Install the tool
+& $file /Silent
