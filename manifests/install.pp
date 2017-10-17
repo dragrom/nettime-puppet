@@ -3,8 +3,8 @@ class nettime::install{
 
  
   exec { 'download_nettime':
-    command     => template('nettime/DownloadAndInstallNetTime.erb'),
-    provider    => powershell ,    
+    command  => template('nettime/DownloadAndInstallNetTime.erb'),
+    provider => powershell ,    
   }
   
 }  
