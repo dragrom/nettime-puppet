@@ -16,7 +16,6 @@ class nettime (
   $enable_autouninstaller   = $::nettime::params::enable_autouninstaller,
   $log_output               = false
 ) inherits ::nettime::params {
-  
-       class { '::nettime::install': }
+    class { '::nettime::install': }
 }
 
