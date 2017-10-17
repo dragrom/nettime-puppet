@@ -22,7 +22,6 @@
   	  }
   	],
   "project_page": "https://github.com/dragrom/NetTime",
-  "requirements": [ "Powershell" ],
   "source": "https://github.com/dragrom/NetTime",
   "summary": "This will install NetTime module",
   "tags": ["NetTime"],
