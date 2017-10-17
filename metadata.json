@@ -1,7 +1,9 @@
 {
   "author": "Dragos Crisan",
-  "dependencies": [{"name":"puppetlabs-powershell","version_requirement":">=1.0.6"}] ,
-  "license": "Open",
+  "dependencies": [
+      { "name":"puppetlabs-powershell","version_requirement":">=1.0.6" }
+  ] ,
+  "license": "Apache-2.0",
   "name": "dragrom-nettime",
   "operatingsystem_support": [
   	  {
@@ -19,10 +21,10 @@
       ]
   	  }
   	],
-  "project_page": "",
-  "requirements": [],
+  "project_page": "https://github.com/dragrom/NetTime",
+  "requirements": [ "Powershell" ],
   "source": "https://github.com/dragrom/NetTime",
   "summary": "This will install NetTime module",
-  "tags": [],
+  "tags": ["NetTime"],
   "version": "0.1.2"
 }
